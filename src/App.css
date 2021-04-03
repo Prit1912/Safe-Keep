@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: rgb(255, 255, 0);
+  height: 18vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.header h1 {
+  font-size: 50px;
+  padding: 0px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer {
+  margin-top: 300px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+footer p {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.main_note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px 20px;
+  width: 500px;
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+form input,
+textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 50px;
+  border-bottom: 2px solid yellow;
+  font-size: 30px;
+}
+
+form textarea{
+  font-size: 20px;
+}
+
+
+input[type="text"]::placeholder {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+textarea::placeholder {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+
+
+.addbtn {
+ 
+  width: 20px;
+  height: 60px;
+  position: absolute;
+  bottom: -50px;
+  left: 400px;
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5); 
+  border-radius: 50% !important;
+  background: #fff !important;
+}
+
+.addbtn .plus_sign {
+font-size: 45px !important;
+font-weight: 900;
+color: yellow;
+cursor: pointer;
+z-index: 222;
+background: transparent;
+}
+
+.addbtn:hover{
+  background: yellow !important;
+}
+
+.addbtn:hover .plus_sign{
+  color: whitesmoke;
+  background: transparent;
+}
+
+.note{
+  
+  width: 330px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 30px 16px;
+  margin-left: 30px;
+  float: left;
+  background: whitesmoke;
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5); 
+
+}
+
+.note h1{
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+
+.note p{
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  text-align: justify;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note .btn{
+  position: relative;
+  float: right;
+  margin-top: 10px;
+  color: #f4b400;
+  border: none;
+  outline: none;
+  width: 20px;
+  height: 58px;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5); 
+  border-radius: 50% !important;
+}
+
+.note .btn:hover{
+  background-color: #f5ba13;
+}
+
+.note .btn:hover .deleteIcon{
+  color: #fff;
+}
+
+.deleteIcon{
+  width: 0.7em;
+  height: 0.7em;
+}
+
+
+@media(max-width: 500px){
+  form{
+    width: 300px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .addbtn {
+ 
+    width: 20px;
+    height: 60px;
+    position: absolute;
+    bottom: -50px;
+    left: 200px;
+    box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5); 
+    border-radius: 50% !important;
+    background: #fff !important;
+  }
+
+  .header{
+   min-width: 100vw;
+  }
+
+  .note{
+    margin-left: 10px;
+  }
+
+}
+
+@media(min-width:500px) and (max-width: 750px){
+.note{
+  margin: 50px 120px;
+}
+}
+
+@media(min-width:750px) and (max-width: 1130px){
+  .note{
+    margin: 50px 50px;
   }
 }
